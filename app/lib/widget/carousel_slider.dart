@@ -56,10 +56,11 @@ class _CarouselImageState extends State<CarouselImage> {
               style: TextStyle(fontSize: 11),
             ),
           ),
-          Container(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: Row(children: <Widget>[
                   Container(
                     child: Column(children: <Widget>[
                       likes![_currentPage]
@@ -78,43 +79,45 @@ class _CarouselImageState extends State<CarouselImage> {
                     ]),
                   )
                 ]),
-          ),
-          Container(
-            padding: EdgeInsets.only(right: 10),
-            child: TextButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.white),
               ),
-              onPressed: () {},
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.play_arrow,
-                    color: Colors.black,
+              Container(
+                padding: EdgeInsets.only(right: 10),
+                child: TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(3),
+                  onPressed: () {},
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.play_arrow,
+                        color: Colors.black,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(3),
+                      ),
+                      Text(
+                        "재생",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 10),
+                child: Column(children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.info),
                   ),
                   Text(
-                    "재생",
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ],
+                    "정보",
+                    style: TextStyle(fontSize: 11),
+                  )
+                ]),
               ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(right: 10),
-            child: Column(children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.info),
-              ),
-              Text(
-                "정보",
-                style: TextStyle(fontSize: 11),
-              )
-            ]),
+            ],
           ),
           Container(
             child: Row(
