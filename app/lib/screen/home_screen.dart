@@ -1,3 +1,4 @@
+import 'package:app/widget/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../model/model_movie.dart';
@@ -13,7 +14,25 @@ class _HomeScreenState extends State<HomeScreen> {
       "keyword": "액션/드라마",
       "poster": "hunt.jpg",
       "like": false,
-    })
+    }),
+    Movie.fromMap({
+      "title": "헌트",
+      "keyword": "액션/드라마",
+      "poster": "hunt.jpg",
+      "like": false,
+    }),
+    Movie.fromMap({
+      "title": "헌트",
+      "keyword": "액션/드라마",
+      "poster": "hunt.jpg",
+      "like": false,
+    }),
+    Movie.fromMap({
+      "title": "헌트",
+      "keyword": "액션/드라마",
+      "poster": "hunt.jpg",
+      "like": false,
+    }),
   ];
   @override
   void initState() {
@@ -22,7 +41,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return TopBar();
+    return ListView(
+      children: <Widget>[
+        Stack(
+          children: <Widget>[CarouselImage(movies: movies), TopBar()],
+        )
+      ],
+    );
   }
 }
 
