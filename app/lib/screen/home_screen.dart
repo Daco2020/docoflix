@@ -1,3 +1,4 @@
+import 'package:app/widget/box_slider.dart';
 import 'package:app/widget/carousel_slider.dart';
 import 'package:app/widget/circle_slider.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[CarouselImage(movies: movies), TopBar()],
         ),
         CircleSlider(movies: movies),
+        BoxSlider(movies: movies),
       ],
     );
   }

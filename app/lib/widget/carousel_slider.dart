@@ -1,3 +1,4 @@
+import 'package:app/screen/detail_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:app/model/model_movie.dart';
@@ -108,7 +109,17 @@ class _CarouselImageState extends State<CarouselImage> {
                 padding: EdgeInsets.only(right: 10),
                 child: Column(children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute<Null>(
+                          builder: (BuildContext context) {
+                            return DetailScreen(
+                              movie: movies![_currentPage],
+                            );
+                          },
+                        ),
+                      );
+                    },
                     icon: Icon(Icons.info),
                   ),
                   Text(
