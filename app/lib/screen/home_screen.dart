@@ -1,3 +1,4 @@
+import 'package:app/model/mock_movies.dart';
 import 'package:app/widget/box_slider.dart';
 import 'package:app/widget/carousel_slider.dart';
 import 'package:app/widget/circle_slider.dart';
@@ -10,32 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<Movie> movies = [
-    Movie.fromMap({
-      "title": "헌트",
-      "keyword": "액션/드라마",
-      "poster": "hunt.jpg",
-      "like": false,
-    }),
-    Movie.fromMap({
-      "title": "헌트",
-      "keyword": "액션/드라마",
-      "poster": "hunt.jpg",
-      "like": false,
-    }),
-    Movie.fromMap({
-      "title": "헌트",
-      "keyword": "액션/드라마",
-      "poster": "hunt.jpg",
-      "like": false,
-    }),
-    Movie.fromMap({
-      "title": "헌트",
-      "keyword": "액션/드라마",
-      "poster": "hunt.jpg",
-      "like": false,
-    }),
-  ];
   @override
   void initState() {
     super.initState();

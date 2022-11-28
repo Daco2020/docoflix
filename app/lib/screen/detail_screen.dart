@@ -51,7 +51,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Container(
                                   padding: EdgeInsets.all(7),
                                   child: Text(
-                                    "99% 일치 2022 15+ 2시간 5분",
+                                    "99% 일치",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 13),
                                   ),
@@ -92,14 +92,14 @@ class _DetailScreenState extends State<DetailScreen> {
                                 Container(
                                   padding: EdgeInsets.all(5),
                                   child: Text(
-                                    widget.movie.toString(),
+                                    widget.movie.keyword,
                                   ),
                                 ),
                                 Container(
                                   padding: EdgeInsets.all(5),
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    "출연: 이정재, 정우성\n제작자: 이정재, 한재덕",
+                                    "",
                                     style: TextStyle(
                                         color: Colors.white60, fontSize: 12),
                                   ),

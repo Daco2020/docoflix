@@ -40,7 +40,7 @@ List<Widget> makeCircleImages(BuildContext context, List<Movie> movies) {
             MaterialPageRoute<Null>(
               builder: (BuildContext context) {
                 return DetailScreen(
-                  movie: movies![i],
+                  movie: movies[i],
                 );
               },
             ),
