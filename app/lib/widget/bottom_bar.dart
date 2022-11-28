@@ -39,7 +39,7 @@ class Bottom extends StatelessWidget {
                   size: 18,
                 ),
                 child: Text(
-                  '저장한 콘텐츠 목록',
+                  '저장 콘텐츠 목록',
                   style: TextStyle(fontSize: 9),
                 ),
               ),
