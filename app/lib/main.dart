@@ -1,4 +1,5 @@
 import 'package:app/screen/home_screen.dart';
+import 'package:app/screen/like_screen.dart';
 import 'package:app/screen/more_screen.dart';
 import 'package:app/screen/search_screen.dart';
 import 'package:app/widget/bottom_bar.dart';
@@ -29,11 +30,7 @@ class _MyAppState extends State<MyApp> {
             children: <Widget>[
               HomeScreen(),
               SearchScreen(),
-              Container(
-                child: Center(
-                  child: Text('save'),
-                ),
-              ),
+              LikeScreen(),
               MoreScreen(),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:app/model/mock_movies.dart';
 import 'package:app/model/model_movie.dart';
 import 'package:flutter/material.dart';
 
@@ -127,10 +128,30 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: InkWell(
-                        onTap: () {},
+                        // onTap: () {
+
+                        // },
                         child: Column(
                           children: [
-                            like ? Icon(Icons.check) : Icon(Icons.add),
+                            like
+                                ? IconButton(
+                                    icon: Icon(Icons.check),
+                                    onPressed: () {
+                                      setState(() {
+                                        like = !like;
+                                        widget.movie.like = like;
+                                      });
+                                    },
+                                  )
+                                : IconButton(
+                                    icon: Icon(Icons.add),
+                                    onPressed: () {
+                                      setState(() {
+                                        like = !like;
+                                        widget.movie.like = like;
+                                      });
+                                    },
+                                  ),
                             Padding(
                               padding: EdgeInsets.all(5),
                             ),

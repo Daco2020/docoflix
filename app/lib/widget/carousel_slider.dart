@@ -1,4 +1,5 @@
 import 'package:app/screen/detail_screen.dart';
+import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:app/model/model_movie.dart';
@@ -67,10 +68,20 @@ class _CarouselImageState extends State<CarouselImage> {
                       likes![_currentPage]
                           ? IconButton(
                               icon: Icon(Icons.check),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  likes![_currentPage] = !likes![_currentPage];
+                                  movies![_currentPage].like = false;
+                                });
+                              },
                             )
                           : IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  likes![_currentPage] = !likes![_currentPage];
+                                  movies![_currentPage].like = true;
+                                });
+                              },
                               icon: Icon(Icons.add),
                             ),
                       Text(

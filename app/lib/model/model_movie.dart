@@ -2,7 +2,7 @@ class Movie {
   final String title;
   final String keyword;
   final String poster;
-  final bool like;
+  late bool like;
 
   Movie.fromMap(Map<String, dynamic> map)
       : title = map["title"],
